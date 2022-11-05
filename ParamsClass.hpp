@@ -16,6 +16,10 @@ public:
 	explicit Params(const std::string &fileName, const std::string &mask);
 	std::string 				getMask() const;
 	std::vector<std::string>	getFile() const;
+	
+private:
+	void _readFile(const std::string &fileName);
+	void _regexMask();
 };
 
 #include "ParamsClass.ipp"

@@ -19,7 +19,9 @@ void Search(const std::vector<std::string> &file, const std::string &mask) {
 }
 
 int main(int argc, char **argv) {
-	Params params("input.txt", "?ad");
+    //if (argc != 3)
+        //throw "No arguments";
+	Params params(argv[1], argv[2]);
 	Search(params.getFile(), params.getMask());
 	return (0);
 }

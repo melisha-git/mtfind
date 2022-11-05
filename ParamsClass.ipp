@@ -3,10 +3,15 @@
 
 #include "ParamsClass.hpp"
 
+void _regexMask(std::string &mask) {
+	mask = std::regex_replace(mask, std::regex("\\?"), "([^ ]?)");
+}
+
 Params::Params(const std::string &fileName, const std::string &mask) : mask_(mask) {
 	// TODO Добавить многопоточность
-	this->_regexMask();
+	std::thread maskThread(_regexMask, std::ref(this->mask_));
 	this->_readFile(fileName);
+	//maskThread.join();
 	
 }
 
@@ -28,10 +33,6 @@ void Params::_readFile(const std::string &fileName) {
 			this->file_.push_back(word);
 	
 		ifs.close();
-}
-
-void Params::_regexMask() {
-	this->mask_ = std::regex_replace(this->mask_, std::regex("\\?"), "([^ ]?)");
 }
 
 #endif

@@ -5,6 +5,7 @@
 #include <string>
 #include <fstream>
 #include <regex>
+#include <thread>
 
 class Params {
 private:
@@ -15,10 +16,6 @@ public:
 	explicit Params(const std::string &fileName, const std::string &mask);
 	std::string 				getMask() const;
 	std::vector<std::string>	getFile() const;
-
-private:
-	void _readFile(const std::string &);
-	void _regexMask();
 };
 
 #include "ParamsClass.ipp"

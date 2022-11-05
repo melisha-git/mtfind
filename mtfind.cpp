@@ -1,6 +1,5 @@
-#include <iostream> // all
-#include "utils.hpp"
-#include <regex>
+#include <iostream>
+#include "ParamsClass.hpp"
 
 void Search(const std::vector<std::string> &file, const std::string &mask) {
 	std::regex reg(mask);
@@ -19,17 +18,10 @@ void Search(const std::vector<std::string> &file, const std::string &mask) {
 	}
 }
 
-std::string getMask(std::string str) {
-	int pos = 0;
-	std::string mask = "([^ ]?)";
-	return std::regex_replace(str, std::regex("\\?"), mask);
-}
-
 int main(int argc, char **argv) {
 	if (argc < 3)
 		throw "argc!";
-	std::vector<std::string> file = utils::split(utils::readFile(argv[1]), '\n');
-	std::string mask = getMask(argv[2]);
-	Search(file, mask);
+	Params params(argv[1], argv[2]);
+	Search(params.getFile(), params.getMask());
 	return (0);
 }

@@ -1,12 +1,12 @@
-SRC = mtfind.cpp ParamsClass.hpp
+SRC = mtfind.cpp SearcherClass.hpp
 
-DELETE = a.exe ParamsClass.hpp.gch
+DELETE = a.exe SearcherClass.hpp.gch
 
 all:
-	g++ $(SRC) -O "mtfind"
+	g++ -std=c++14 $(SRC) -O "mtfind"
 	
 run:
-	./mtfind input.txt "?ad"
+	./mtfind input.txt "?a?d"
 	
 clean :
 	rm -rf $(DELETE)

@@ -30,3 +30,5 @@
 во входном файле.<br>
 Решение представить в виде архива с исходным кодом и проектом CMake или Visual Studio (либо в виде ссылки на
 онлайн Git-репозиторий). Код должен компилироваться в GCC или MSVC.<br>
+<hr>
+https://miro.com/welcomeonboard/UFoxSzZqcDdSZG9lRExvMWpoVGFpeWRjbEY0QnZabzlibWdzN2ZsQno1Njl5cXNTNld0VnRUS1ZpY2hjV2Q5VnwzNDU4NzY0NTM0MzQxMTc2MDEzfDI=?share_link_id=479103222900

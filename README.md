@@ -32,3 +32,4 @@
 онлайн Git-репозиторий). Код должен компилироваться в GCC или MSVC.<br>
 <hr>
 <a href = "https://miro.com/welcomeonboard/UFoxSzZqcDdSZG9lRExvMWpoVGFpeWRjbEY0QnZabzlibWdzN2ZsQno1Njl5cXNTNld0VnRUS1ZpY2hjV2Q5VnwzNDU4NzY0NTM0MzQxMTc2MDEzfDI=?share_link_id=479103222900"> Miro_link </a>
+<hr>

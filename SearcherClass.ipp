@@ -9,12 +9,12 @@ Searcher::Searcher(const std::string &fileName, const std::string &mask) : mask_
 	this->_regexMask();
 
 	if (!ifs.is_open())
-			throw "File not open!";
-    for (int i = 0; i <= 7; ++i)
-	    (this->pthreads_).push_back(std::thread(&Searcher::_search, this, std::ref(ifs)));
-	 for (int i = 0; i <= 7; ++i)
-	    (this->pthreads_[i]).join();
-	ifs.close();
+		throw "File not open!";
+     	for (int i = 0; i <= 7; ++i)
+	    	(this->pthreads_).push_back(std::thread(&Searcher::_search, this, std::ref(ifs)));
+    	for (int i = 0; i <= 7; ++i)
+	    	(this->pthreads_[i]).join();
+     	ifs.close();
 }
 
 //print result
